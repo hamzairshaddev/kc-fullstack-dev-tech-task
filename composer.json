@@ -1,0 +1,29 @@
+{
+    "name": "courses-and-categories/api",
+    "description": "A RESTful API for managing courses and categories.",
+    "type": "project",
+    "require": {
+        "php": "^8.3",
+        "slim/slim": "^4.0",
+        "slim/psr7": "^1.0",
+        "monolog/monolog": "^2.0",
+        "doctrine/orm": "^2.9",
+        "doctrine/dbal": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./",
+            "App\\Services\\": "./services/",
+            "App\\Models\\": "./models/",
+            "App\\Controllers\\": "./controllers/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

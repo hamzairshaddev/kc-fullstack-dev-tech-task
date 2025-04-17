@@ -1,45 +1,25 @@
-# Test task - Course catalog
-## To do:
 
-1. Create a Restful API according to the specification in the swagger.yaml;
-    - Requirements:
-        - Pure PHP;
-        - PSR-12;
-        - Services should have as few sql requests as possible;
-2. Create a database structure and put migrations in /database/migrations folder;
-    - Example of migration is provided in the /database/migrations/1713358478_example.sql file;
-    - Mock data is located in the /data folder;
-4. Create SPA application with a web page to display the courses and categories;
-    - Design layouts are located in the /design folder;
-        - Pixel perfect is not required;
-    - Requirements:
-        - Any front-end framework can be used, but pure technologies are preferred;
-    - Layout key features include:
-        - By default, all courses should be displayed;
-        - By clicking on a category, only courses from that category should be displayed;
-        - On the desktop layout, titles and descriptions are truncated with ellipses;
-        - If category has courses the count of courses should be displayed and value should include count of courses in child categories;
-        - Each course card should display name of the main category of the course;
-    - Restrictions:
-        - Each course should belong to only one category;
-        - Max depth of the categories tree is 4;
+## How to Run the Project
 
-## How to run project:
+1. Start the services using Docker Compose:
+    ```bash
+    docker-compose up --build
+    ```
 
-```
-docker-compose up --build
-```
+2. Run the import script by visiting the following URL:
+    ```
+    http://api.cc.localhost/import_data.php
+    ```
 
-## Hosts:
-API host: http://api.cc.localhost
+## Hosts
 
-DB host: http://db.cc.localhost
+- **API Host:** [http://api.cc.localhost](http://api.cc.localhost)
+- **Database Host:** [http://db.cc.localhost](http://db.cc.localhost)
+- **Frontend Host:** [http://cc.localhost](http://cc.localhost)
+- **Traefik Dashboard:** [http://127.0.0.1:8080/dashboard/#/](http://127.0.0.1:8080/dashboard/#/)
 
-Front host: http://cc.localhost
+## Additional Information
 
-Traefik dashboard: http://127.0.0.1:8080/dashboard/#/
+- **Database Credentials:** Refer to the `docker-compose.yml` file.
+- **API Documentation:** Available in the `swagger.yml` file.
 
-
-DB credentials - look at the docker-compose.yml
-
-Api docs are in swagger.yml
